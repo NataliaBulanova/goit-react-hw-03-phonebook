@@ -7,13 +7,12 @@ const ContactList = ({ contacts, handleClick }) => {
     <List>
       {contacts.map(({ id, name, number }) => {
         return (
-          <li key={id}>
-            <ContactItem
-              name={name}
-              number={number}
-              onDelete={() => handleClick(id)}
-            />
-          </li>
+          <ContactItem
+            key={id}
+            name={name}
+            number={number}
+            onDelete={() => handleClick(id)}
+          />
         );
       })}
     </List>
