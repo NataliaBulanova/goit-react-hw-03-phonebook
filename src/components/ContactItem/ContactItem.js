@@ -1,12 +1,17 @@
 import PropTypes from "prop-types";
 import { ContactText } from "./ContactItem.styled";
-// import { Button } from "../ContactForm/ContactForm.styled";
+import { Button } from "../ContactForm/ContactForm.styled";
 
-const ContactItem = function ({ name, number }) {
+const ContactItem = function ({ name, number, onDelete }) {
   return (
-    <ContactText>
-      {name}: {number}
-    </ContactText>
+    <>
+      <ContactText>
+        {name}: {number}
+      </ContactText>
+      <Button type="button" onClick={onDelete}>
+        Delete
+      </Button>
+    </>
   );
 };
 
